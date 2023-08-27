@@ -22,9 +22,10 @@
         app:layout_constraintVertical_bias="0" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/white"
+        android:background="@drawable/login_view_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".78"
@@ -33,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <androidx.viewpager.widget.ViewPager
+        <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -43,10 +44,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        </androidx.viewpager.widget.ViewPager>
+        </androidx.viewpager2.widget.ViewPager2>
 
-        <TableLayout
-            android:id="@+id/table_layout"
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -55,53 +56,85 @@
             app:layout_constraintTop_toBottomOf="parent"
             app:layout_constraintVertical_bias="0" />
 
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_facebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="208dp"
-            android:layout_marginBottom="116dp"
+            android:layout_marginEnd="28dp"
             android:backgroundTint="@color/white"
             android:clickable="true"
             android:elevation="35dp"
             android:src="@drawable/facebook"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintEnd_toStartOf="@+id/fab_twitter"
+            app:layout_constraintStart_toEndOf="@+id/fab_google"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager"
+            app:layout_constraintVertical_bias="0.525"
             app:tint="@null" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_google"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="5dp"
             android:backgroundTint="@color/white"
             android:clickable="true"
             android:elevation="35dp"
             android:src="@drawable/google"
+
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.317"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view_pager"
-            app:layout_constraintVertical_bias="0.12"
+            app:layout_constraintVertical_bias="0.314"
             app:tint="@null" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_twitter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="84dp"
             android:backgroundTint="@color/white"
             android:clickable="true"
             android:elevation="35dp"
+
             android:src="@drawable/twitter"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.677"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view_pager"
-            app:layout_constraintVertical_bias="0.12"
+            app:layout_constraintVertical_bias="0.532"
             app:tint="@null" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/company_logo"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias=".30"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to sizzling bits"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias=".2"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
