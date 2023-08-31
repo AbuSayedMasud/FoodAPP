@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.335"
+        app:layout_constraintVertical_bias=".15"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
@@ -28,11 +28,12 @@
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
@@ -44,11 +45,12 @@
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48"
+        app:layout_constraintTop_toBottomOf="@id/mobile_number"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
@@ -59,12 +61,13 @@
         android:hint="Confirm Password"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
+        android:layout_marginTop="20dp"
         android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
@@ -75,10 +78,11 @@
         android:background="@drawable/btn_bg"
         android:textSize="16dp"
         android:textStyle="bold"
+        android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".7"
+        app:layout_constraintTop_toBottomOf="@id/confirm_password"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 </androidx.constraintlayout.widget.ConstraintLayout>
